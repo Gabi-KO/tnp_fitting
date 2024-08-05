@@ -1,0 +1,7 @@
+eta range: (-1.50000, -0.80000) 
+pt range: (+5.00000, +10.00000) 
+Data Efficiency: 0.61740 
+Data Error: 0.09956 
+MC Efficiency: 0.90287 
+MC Error: 0.00100 
+Scale Factor: 0.68381937599 +/- 0.110273182573
