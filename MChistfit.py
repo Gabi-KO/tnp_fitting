@@ -34,12 +34,17 @@ def double_gauss(x, *params):
     mean = params[0]
     sigma1 = params[1]
     sigma2 = params[2]
+    #phi = params[3]
     alpha = params[3]
     #A1 = params[3]
     #A2 = params[4]
 
+    #cos = np.cos(phi)**2
+    #sin = np.sin(phi)**2
+
     #gauss =  A1*np.exp((-(x-mean)**2)/(2*(sigma1**2))) + A2*np.exp((-(x-mean)**2)/(2*(sigma2**2)))
-    gauss =  (1/np.sqrt(2*np.pi))*( (alpha/sigma1)*np.exp((-(x-mean)**2)/(2*(sigma1**2))) + ((1-alpha)/sigma2)*np.exp((-(x-mean)**2)/(2*(sigma2**2))) )
+    gauss = (1/np.sqrt(2*np.pi))*( (alpha/sigma1)*np.exp((-(x-mean)**2)/(2*(sigma1**2))) + ((1-alpha)/sigma2)*np.exp((-(x-mean)**2)/(2*(sigma2**2))) )
+    #gauss = (1/np.sqrt(2*np.pi))*( (cos/sigma1)*np.exp((-(x-mean)**2)/(2*(sigma1**2))) + ((sin)/sigma2)*np.exp((-(x-mean)**2)/(2*(sigma2**2))) )
 
     return gauss
 
@@ -312,16 +317,20 @@ def fit_gaussian_with_background(file_name):
     diff = sig_max_val - bin_contents_sig[second_loc]
 
     #print(diff)
-
+    '''
     amp1 = amp #+ diff
     amp2 = amp
 
     alpha_sig = 2
     n = 2
     tailLeft = 2
+    '''
+
+    #phi = np.pi / 4
 
     #p0_sig = [mean, sigma1, sigma2, amp1, amp2]
     p0_sig = [mean, sigma1, sigma2, amp]
+    #p0_sig = [mean, sigma1, sigma2, phi]
     #p0_sig = [mean, sigma1, amp]
     #p0_sig = [mean, sigma1, sigma2, alpha_sig, n, tailLeft]
 
