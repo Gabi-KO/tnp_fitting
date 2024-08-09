@@ -43,7 +43,7 @@ flags = {
 #baseOutDir = '/eos/user/b/bjoshi/www/EGM/TnP/PromptReco_official/tnpEleID_PromptReco2022FG/'
 #baseOutDir = '/uscms/home/caleb/nobackup/KU_SUSY_Run3/CMS_EGamma/tnpAnalysis/tnpEleID_PromptReco2023CD'
 #baseOutDir = '/uscms/home/gkennedy/nobackup/ScientificLinux7/CMSSW_11_2_0/src/egm_2/plots/fit_tests'
-baseOutDir = '/uscms/home/gkennedy/nobackup/ScientificLinux7/CMSSW_11_2_0/src/egm_2/Loose_Cut/MC_Test/fit_' #OUTPUT DIRECTORY
+baseOutDir = '/uscms/home/gkennedy/nobackup/ScientificLinux7/CMSSW_11_2_0/src/egm_2/test/testfit_' #OUTPUT DIRECTORY
 
 #############################################################
 ########## samples definition  - preparing the samples
@@ -197,8 +197,8 @@ if not samplesDef['tagSel'] is None: samplesDef['tagSel'].set_puTree(puFile)
 #]
 
 biningDef = [
-   { 'var' : 'el_sc_eta' , 'type': 'float', 'bins': [1.5,2.4]},
-   { 'var' : 'el_pt' , 'type': 'float', 'bins': [5,10] },
+   { 'var' : 'el_sc_eta' , 'type': 'float', 'bins': [-0.8,0.8]},
+   { 'var' : 'el_pt' , 'type': 'float', 'bins': [20,30] },
 ]
 
 #############################################################

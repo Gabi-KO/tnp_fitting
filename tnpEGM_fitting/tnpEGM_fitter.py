@@ -66,7 +66,7 @@ if not args.flag in tnpConf.flags.keys() :
 
 OutDir = tnpConf.baseOutDir + run_num
 
-outputDirectory = '%s/%s/' % (OutDir,args.flag)
+outputDirectory = '%s/%s' % (OutDir,args.flag)
 
 print('===>  Output directory: ')
 print(outputDirectory)

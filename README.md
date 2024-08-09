@@ -25,6 +25,8 @@ alias use_sl7='cmssw-el7 -p --bind `readlink $HOME` --bind `readlink
 /uscmst1b_scratch -- /bin/bash -l' 
 ```
 
+This will make it so the command `use_sl7` puts you in the container.
+
 After which you need to run `cmsenv` set up the root environment.
 
 Here is an example of how to run the code:
@@ -44,8 +46,6 @@ the comments of `run.sh`.
 
 Here are two examples, one running on Data and one on Monte Carlo:
 
-
-
 ```
 ./run.sh etc/config/settings_ele_PromptReco2023CD.py
 passingPreselectionAndLoose 01
@@ -58,3 +58,21 @@ passingPreselectionAndLoose 01mc -m
  `settings_ele_PromptReco2023CD.py`. Additionally the output directory
  can be edited on line 46.
 
+This will output a fitting plot (alongside two extras that are
+useless). It'll be the one with "bin00" at the beginning.
+
+It will also output some .root files. The one you want to look at in
+the TBrowser is
+`data_Run2023C_passingPreselectionAndLoose.root`. Enter the root
+environment and then do the following.
+
+```
+TBrowser b("data_Run2023C_passingPreselectionAndLoose.root")
+
+```
+
+Inside there will be some root canvases. You will want to download
+bin00's Pass and Fail canvases as .C files. It might also be good to
+download them as .png files as well for reference.
+
+These .C files are the ones the code is run over.

@@ -270,16 +270,18 @@ def parameters(a):
         'data_Run2023C'                 : tnpSample('data_Run2023C',               '/uscms_data/d3/gkennedy/ScientificLinux7/CMSSW_11_2_0/src/egm_tnp_analysis/tnpData/Run3_2023/data/data_EGamma0_crab_2023_Run2023C_0v1.root')
     }
     
+    '''
     if data_config == 'd':
         Run3_2023 = {
         'DY_4j_madgraph_2023preBPIX'    : tnpSample('DY_4j_madgraph_2023preBPIX',  '/uscms_data/d3/gkennedy/ScientificLinux7/CMSSW_11_2_0/src/egm_tnp_analysis/tnpData/Run3_2023/mc/mc_2023preBPIX_DYto2L-4Jets.root', isMC=True)
     }
     '''
+    
     if data_config == 'm':
         Run3_2023 = {
         'DY_4j_madgraph_2023preBPIX'    : tnpSample('DY_4j_madgraph_2023preBPIX',  '/uscms_data/d3/gkennedy/ScientificLinux7/CMSSW_11_2_0/src/egm_tnp_analysis/tnpData/Run3_2023/mc/mc_2023preBPIX_DYto2L-4Jets.root')
     }
-    '''
+    
 #Run3_2023 = {
 #    'DY_4j_madgraph_2023preBPIX'    : tnpSample('DY_4j_madgraph_2023preBPIX',  '/uscms_data/d3/gkennedy/ScientificLinux7/CMSSW_11_2_0/src/egm_tnp_analysis/tnpData/Run3_2023/mc/mc_2023preBPIX_DYto2L-4Jets.root', isMC=True),
 #    'data_Run2023C'                 : tnpSample('data_Run2023C',               '/uscms_data/d3/gkennedy/ScientificLinux7/CMSSW_11_2_0/src/egm_tnp_analysis/tnpData/Run3_2023/data/data_EGamma0_crab_2023_Run2023C_0v1.root')

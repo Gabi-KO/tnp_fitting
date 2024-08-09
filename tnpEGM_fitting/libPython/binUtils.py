@@ -8,15 +8,15 @@ def createBins( bining, cut ):
     nbin = 1
     index = list(range(len(bining)))
 
-    #listOfIndex = [] 
-    #indexlist = []
+    listOfIndex = [] 
+    indexlist = []
     
     for ix in range(len(index)):
         index[ix] = -1
         indexlist.append(-1)
         listOfIndex.append(indexlist)
 
-    listOfIndex = []    
+    #listOfIndex = []    
     listOfIndex.append( index )
 
     ### first map nD bins in a single list

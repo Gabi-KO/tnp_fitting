@@ -19,11 +19,11 @@ echo "Setting environment"
 #python tnpEGM_fitter.py $1 --flag $2 --runNumber $3 --configuration $4 --doFit $5 #--mcSig
 #python tnpEGM_fitter.py $1 --flag $2 --runNumber $3 --configuration $4 --sumUp $5 #--mcSig
 
-python tnpEGM_fitter.py $1 --flag $2 --runNumber $3 --checkBins $4
-python tnpEGM_fitter.py $1 --flag $2 --runNumber $3 --createBins $4
-python tnpEGM_fitter.py $1 --flag $2 --runNumber $3 --createHists $4
-python tnpEGM_fitter.py $1 --flag $2 --runNumber $3 --doFit $4
-python tnpEGM_fitter.py $1 --flag $2 --runNumber $3 --sumUp $4
+python tnpEGM_fitter.py $1 --flag $2 --runNumber $3 --checkBins $4 > output.txt 2>error.txt
+python tnpEGM_fitter.py $1 --flag $2 --runNumber $3 --createBins $4 >> output.txt 2>>error.txt
+python tnpEGM_fitter.py $1 --flag $2 --runNumber $3 --createHists $4 >> output.txt 2>>error.txt
+python tnpEGM_fitter.py $1 --flag $2 --runNumber $3 --doFit $4 >> output.txt 2>>error.txt
+python tnpEGM_fitter.py $1 --flag $2 --runNumber $3 --sumUp $4 >> output.txt 2>>error.txt
 
 
 #command
