@@ -180,7 +180,7 @@ def fit_gaussian_with_background(file_name):
     gauss_type = 1
     
     #Background Function (1) or Exponential (0)
-    bkg_type = 0
+    bkg_type = 1
 
     #Manual Override
     override = 1
@@ -242,7 +242,7 @@ def fit_gaussian_with_background(file_name):
     else:
         print("# of Bins do not match")
         print(num_bins, len(bin_contents))
-    
+
     bin_edges = np.linspace(x_min, x_max, num_bins + 1)
 
     bin_contents = np.array(bin_contents)
@@ -254,14 +254,15 @@ def fit_gaussian_with_background(file_name):
     print("Setting Parameters ...")
 
     #bounds for fitting
-    sig_min = 70
-    sig_max = 130
+    #changes what bins are used in fit
+    sig_min = 80
+    sig_max = 100
     
     bkg_min = 50
-    bkg_max = 63
+    bkg_max = 75
 
-    bkg_min2 = 105
-    bkg_max2 = 115
+    bkg_min2 = 110
+    bkg_max2 = 130
     
     mask_sig = (bin_edges[:-1] >= sig_min) & (bin_edges[:-1] <= sig_max)
     #mask_bkg = (bin_edges[:-1] >= bkg_min) & (bin_edges[:-1] <= bkg_max)

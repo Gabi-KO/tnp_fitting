@@ -69,7 +69,7 @@ def bkg_func(x, *params):
         return erfc*u
 
 
-peak = 140
+peak = 100
 alpha = 60
 beta = 0.07
 gamma = 0.1
