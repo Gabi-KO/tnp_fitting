@@ -25,9 +25,7 @@ After which you need to run `cmsenv` set up the root environment.
 
 ## Creating .C Files
 
-If you need to create the .C files you want to fit on, you can do so
-by running `tnpEGMfitter.py`. The instructions on how to do so are in
-the comments of `run.sh`. The .C files are functionally used as .txt files.
+If you need to create the .C files you want to fit on, you can do so by running `tnpEGMfitter.py`. The instructions on how to do so are in the comments of `run.sh`. The .C files are functionally used as .txt files.
 
 
 Here are two examples, one running on Data and one on Monte Carlo:
